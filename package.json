@@ -1,4 +1,26 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "## Índice",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginnaaceror/BOG002-md-links.git"
+  },
+  "author": "Ginna Paola Acero Russi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ginnaaceror/BOG002-md-links/issues"
+  },
+  "homepage": "https://github.com/ginnaaceror/BOG002-md-links#readme",
+  "dependencies": {
+    "got": "^11.8.2",
+    "yargs": "^17.0.1"
+  }
 }
