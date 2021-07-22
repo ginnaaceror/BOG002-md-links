@@ -19,7 +19,7 @@ if (!path) {
         mdLinks(path, { validate: true })       
             .then((data) => { 
                 const total = data.length
-                const arrayValidate = data.map((link) => link.href)         
+                const arrayValidate = data.map((link) => link.href)   
                 const uniqueLink = [...new Set(arrayValidate)]
                 const unique = uniqueLink.length
                 const searchbroken = data.filter((link) => link.ok !== 'OK')

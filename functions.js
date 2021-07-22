@@ -1,7 +1,6 @@
 const got = require ('got'); //Biblioteca para hacer peticiones http
 const fs = require('fs');
 const refLink = /\[(.+?)\]\((https:.+?)\)/g;
-const file = '';
 
 //var readdirp = require('readdirp');
 
@@ -10,9 +9,10 @@ const searchLinks = (route) => {
   return new Promise((resolve, reject) => {
     fs.readFile(route, 'utf8',(err, data) => {
       const content = data.match(refLink);
+      // console.log(content)
       const arrayContent = [];
       content.forEach((item) => {
-        if (!Array.isArray(refLink.exec(item))) { 
+        if (!Array.isArray(refLink.exec(item))) {
           let [, text, href] = refLink.exec(item); // Destructuración de la expresión regular
           const linksObject = {text: text, href: href, file: route}
           arrayContent.push(linksObject)
@@ -22,11 +22,14 @@ const searchLinks = (route) => {
     })   
   })
 }
+//searchLinks('PruebaFile/prueba1.md')
+//.then(console.log)
 
 // Validate links and VALIDATE: TRUE.
 const validateLinks = (links) => {
   const newArray = links.map(link => {
     let text = link.text;
+    let file = link.file;
     let url = link.href;
       return got(url).then((response) => {
         let status = response.statusCode;

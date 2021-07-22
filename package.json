@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage --verbose"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ginnaaceror/BOG002-md-links#readme",
   "dependencies": {
     "got": "^11.8.2",
+    "jest": "^27.0.6",
     "yargs": "^17.0.1"
   }
 }

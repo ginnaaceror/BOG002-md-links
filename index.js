@@ -13,7 +13,7 @@ const mdLinks = (path, options = { validate: false }) => {
       console.log('no funciona')
     })
 }    
-//var resultado = mdLinks('./Prueba File/PruebaLinks.md', {validate: true})
+//var resultado = mdLinks('PruebaFile/prueba1.md', {validate: true})
 //resultado.then(console.log)
 
 module.exports = { mdLinks }
